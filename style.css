@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Pangolin&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #ff7613;
+    --text-color: #727171;
+}
+
+.image{
+    height: 250px;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 40px;
+
+}
+
+.description{
+    display: flex;
+}
+
+html{
+    font-size: 12px;
+}
+
+body{
+    font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* common styles */
+
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+button{
+    margin-top: 10px;
+    display: block;
+    border: 1px solid rgb(255, 255, 255);  
+}
+
+.btncolor{
+    color: black;
+}
+
+button:hover{
+    background-color: var(--primary-color);
+}
+
+.description{
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.title{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.item-pretitle{
+    color: var(--text-color);
+    font-weight: 300;
+    font-size: 13px;
+}
+
+.item-title{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 7px;
+}
+
+.item-subtitle{
+    color: var(--text-color);
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 7px;
+}
+
+/* layout */
+
+.container{
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px;
+    width: 95%;
+    background-color: #070707;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 95%;
+        grid-template-columns: 1fr;
+        padding: 5px;
+        gap: 30px;
+    }
+}
+
+.profile{ 
+    grid-column: 1/-1;
+    margin-bottom: 5px;
+}
+
+.group-1, .group-2{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.group-3{
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+}
+
+.group-3>div{
+    flex: 1;
+}
+
+@media only screen and (max-width:768px) {
+    .group-3{
+        flex-direction: column;    
+    }
+
+    #socialouter{
+        margin-top: 20px;
+    }
+
+    #contactouter{
+        margin-left: 0px;
+    }
+}
+
+/* profile */
+
+.profile_container{
+    display: flex;
+    gap: 10px;
+}
+
+.profile_profileImg{
+    width: 50%;
+}
+
+.first{
+    color: white;
+    font-weight: 300;
+    font-size: clamp(20px, 7vw , 50px );
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: -8px;
+}
+
+.last{
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: clamp(30px, 13vw, 75px);
+    text-transform: uppercase;
+    display: block;
+}
+
+.profile_title{
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+    .profile_container {
+        flex-direction: column;
+    }
+}
+
+/* career objective */
+
+.paragraph{
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-top: 15px;
+}
+
+/* work */
+
+.workitem{
+    margin-top: 15px;
+}
+
+.list{
+    margin-top: 15px;
+}
+
+.academicitem{
+    margin-top: 15px;
+}
+
+.interest_items{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.interest_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--text-color);
+}
+
+.projects{
+    margin-top: 15px;
+}
+
+.contactinfo{
+    margin-top: 15px;
+}
+
+.contact{
+    margin-left: 120px;
+}
+
+.social_items{
+    margin-top: 15px;
+}
+
+.social{
+    margin-top: 10px;
+    display: flex;
+    color: var(--text-color);
+    font-size: 15px;
+    gap: 10px;
+    align-items: center;
+}
+
+#social{
+    margin-top: 20px;
+}
+
+.social:hover{
+    color: var(--primary-color);
+}
+
+hr{
+    grid-column: 1/-1;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    border-top: 2px solid rgba(128, 128, 128, 0.288);
+}
+
+@media only screen and (max-width:768px) {
+    hr{
+        margin: 0 auto;       
+    }
+}
+
+.link{
+    text-decoration: underline;
+}
+
+.link:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+}
